@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "@types/react": "^16.8.4",
+    "@types/react-router-dom": "^4.3.1",
+    "autoprefixer": "^9.4.9",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.3333",
     "webpack": "^4.29.5",
@@ -22,6 +24,7 @@
     "koa-static": "^5.0.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-router-dom": "^4.3.1",
     "ts-node": "^8.0.2"
   }
 }

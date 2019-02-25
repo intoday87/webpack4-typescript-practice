@@ -6,15 +6,15 @@ import * as path from 'path'
 const app = new Koa()
 
 app.use(
-    mount(
-        '/',
-        serve(path.join(process.cwd(), 'public'), {
-            extensions: ['html'],
-        }),
-    ),
+  mount(
+    '/',
+    serve(path.join(process.cwd(), 'public'), {
+      extensions: ['html'],
+    }),
+  ),
 )
 
 const port = 3000;
 app.listen(port, () => {
-    console.log(`running server on ${port} port...`)
+  console.log(`running server on ${port} port...`)
 })
