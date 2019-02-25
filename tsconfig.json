@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "module": "commonjs",
+    "target": "ES2017",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

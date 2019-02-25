@@ -1,0 +1,5 @@
+node_modules/
+# webpack distribution directory
+public/dist
+# jetbrain
+.idea
