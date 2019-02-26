@@ -1,10 +1,9 @@
 const path = require('path');
 const autoprefixer = require('autoprefixer')
 
-module.exports = {
+const config = {
   devtool: "inline-source-map",
   mode: 'development',
-  entry: './src/entry/index.tsx',
   module: {
     rules: [
       {
@@ -41,9 +40,28 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
   },
-  output: {
-    filename: "bundle.js",
-    chunkFilename: '[name].bundle.js',
-    path: path.resolve(__dirname, "public/dist"),
-  },
 };
+
+module.exports = [{
+  ...config,
+  entry: {
+    main: './src/entry/index.tsx',
+  },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'public/dist'),
+    chunkFilename: '[name].bundle.js',
+  },
+}, {
+  ...config,
+  entry: {
+    another: './src/entry/another.ts',
+  },
+  output: {
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
+    library: 'Bundle',
+    path: path.resolve(__dirname, 'public/dist'),
+    publicPath: "dist/"
+  },
+}]

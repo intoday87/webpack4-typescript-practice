@@ -1,29 +1,30 @@
 import * as React from 'react'
-import {Suspense} from 'react'
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import Home from './home'
+import {A, B} from './page'
 
-const A = React.lazy(() => import('./a'));
-const B = React.lazy(() => import('./b'));
 
-export default () => (
-  <Router>
-    <div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/a">a</Link></li>
-        <li><Link to="/b">b</Link></li>
-      </ul>
+class App extends React.Component {
 
-      <hr/>
+  render() {
+    return (
+      <Router>
+        <div>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/a">a</Link></li>
+            <li><Link to="/b">b</Link></li>
+          </ul>
 
-      <Route exact path="/" component={Home}/>
-      <Suspense fallback={<div>loading...</div>}>
-        <Switch>
-          <Route exact path="/a" render={() => <A />}/>
-          <Route path="/b" render={() => <B />}/>
-        </Switch>
-      </Suspense>
-    </div>
-  </Router>
-)
+          <hr/>
+
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/a" component={A}/>
+          <Route path="/b" component={B}/>
+        </div>
+      </Router>
+    )
+  }
+}
+
+export default App

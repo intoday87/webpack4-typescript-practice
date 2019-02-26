@@ -4,26 +4,31 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config webpack.config.js --progress --watch",
+    "clean": "rimraf publid/dist",
+    "build": "npm run clean && webpack --config webpack.config.js --progress --watch",
     "start": "ts-node --project ./tsconfig.json ./server/index.ts"
   },
   "devDependencies": {
     "@types/react": "^16.8.4",
+    "@types/react-loadable": "^5.5.0",
     "@types/react-router-dom": "^4.3.1",
+    "@types/webpack": "^4.4.24",
+    "@types/node": "^11.9.5",
+    "@types/react-dom": "^16.8.2",
     "autoprefixer": "^9.4.9",
+    "rimraf": "^2.6.3",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.3333",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
-    "@types/node": "^11.9.5",
-    "@types/react-dom": "^16.8.2",
     "koa": "^2.7.0",
     "koa-mount": "^4.0.0",
     "koa-static": "^5.0.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-loadable": "^5.5.0",
     "react-router-dom": "^4.3.1",
     "ts-node": "^8.0.2"
   }
