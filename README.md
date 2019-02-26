@@ -7,7 +7,7 @@
 ```
 대신
 ```jsx
-<route component={() => <A />} />
+<route render={() => <A />} />
 ```
 로 하는 이유
 
