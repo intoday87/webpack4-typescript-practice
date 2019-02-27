@@ -9,12 +9,13 @@
     "start": "ts-node --project ./tsconfig.server.json ./server/index.ts"
   },
   "devDependencies": {
+    "@types/koa": "^2.0.48",
+    "@types/node": "^11.9.5",
     "@types/react": "^16.8.4",
+    "@types/react-dom": "^16.8.2",
     "@types/react-loadable": "^5.5.0",
     "@types/react-router-dom": "^4.3.1",
     "@types/webpack": "^4.4.24",
-    "@types/node": "^11.9.5",
-    "@types/react-dom": "^16.8.2",
     "autoprefixer": "^9.4.9",
     "rimraf": "^2.6.3",
     "ts-loader": "^5.3.3",

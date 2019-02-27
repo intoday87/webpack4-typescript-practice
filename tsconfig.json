@@ -3,7 +3,7 @@
     "baseUrl": "./src",
     "outDir": "./dist",
     "module": "esnext",
-    "target": "ES2017",
+    "target": "esnext",
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "node",
     "sourceMap": true,
