@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "clean": "rimraf publid/dist",
+    "clean": "rimraf public/dist",
     "build": "npm run clean && webpack --config webpack.config.js --progress --watch",
-    "start": "ts-node --project ./tsconfig.json ./server/index.ts"
+    "start": "ts-node --project ./tsconfig.server.json ./server/index.ts"
   },
   "devDependencies": {
     "@types/react": "^16.8.4",

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "outDir": "./dist",
-    "module": "commonjs",
+    "module": "esnext",
     "target": "ES2017",
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "node",
